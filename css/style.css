@@ -1,0 +1,108 @@
+header {
+  background: #444;
+  height: 90px;
+}
+
+nav {
+  margin: 0 auto;
+  width: 960px;
+}
+
+nav img {
+  margin-top: 10px;
+  float: left;
+  margin-right: 30px;
+}
+
+nav ul {
+  float: left;
+
+}
+
+a {
+  color:red;
+  text-decoration: none;
+}
+
+/* a:visited {
+  color:red;
+  text-decoration: none;
+} */
+
+nav li {
+  float: left;
+  line-height: 90px;
+  margin-right: 90px;
+}
+
+main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+main > img:first-child {
+  margin-top: 30px;
+}
+/* direct child (>) and first-child together narrow this one down.
+If just did first-child... rule applies to the first child of every HTML element... so almost every image */
+
+main > ul:nth-child(2) {
+  margin-top: 30px;
+  overflow:hidden;  /*kind of a cheat, but accepted best practice 
+  /* figure out the height of all the elements
+  /* example of computer can't count robots in room, but can count heartbeats
+  /* for our website in lab, can float all left universally
+  /*but in wild, some things can't float left, and old code definitely won't... so need to know this trick and how to adjust because of it
+  */
+  /* the 2 can be replaced with 3n if you would like to hit every third element (3,6,9...) */
+}
+
+/* main ul was not good enough, because later there will be more ul's everywhere and it would likely break.  
+/* could not do 'first-child' because it was not the first child */
+
+main > ul:nth-child(2) > li {
+  float: left;
+  margin-right: 30px;
+}
+
+main > ul:nth-child(2) > li:last-child(3n) {
+  margin-right: 0px;
+}
+
+main > article {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+main > article > * {
+  float: left;
+  width: 50%;
+}
+
+main > article > section {
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+main > article > section > p {
+  height: 300px;
+  overflow: auto;
+}
+
+footer {
+  height: 100px;
+  background-color: #444;
+  margin-top: 30px;
+}
+
+button:hover {
+  background-color: forestgreen;
+  transition: 350ms;
+}
+
+
+
+
+
+
+/* good tool to see which elements you are modifying:  'border: blue 10px solid;'
